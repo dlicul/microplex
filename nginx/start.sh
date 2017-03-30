@@ -1,3 +1,5 @@
-docker build -t nginx2 .
-docker run --name nginx2 -P -d nginx2
+#!/bin/bash
+set -e
+docker build -t microplex/nginx .
+docker run --name microplex-nginx -P -d microplex/nginx
 docker ps

@@ -1,3 +1,5 @@
-docker stop nginx2
-docker rm nginx2
-docker rmi nginx2
+#!/bin/bash
+set -e
+docker stop microplex-nginx
+docker rm microplex-nginx
+docker rmi microplex/nginx

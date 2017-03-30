@@ -1,0 +1,19 @@
+version: '2'
+services:
+    nginx:
+        build: nginx/.
+        ports:
+            - "80:80"
+        links:
+            - controller:microplex-controller
+        networks:
+            - front
+    controller:
+        build: node/.
+        ports:
+            - "6667"
+        networks:
+            - front
+networks:
+    front:
+        driver: bridge
